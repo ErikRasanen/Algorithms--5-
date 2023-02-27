@@ -91,37 +91,37 @@ Finally, the main function sets the value of n to 4 and calls the countWays func
 - There are `n` stairs, a person standing at the bottom wants to reach the top. Write a program that counts the number of ways someone can climb up to m stairs for a given value m. For example, if m is 4, it is possible to climb 1 stair or 2 stairs or 3 stairs or 4 stairs at a time. Make sure you use. Refer to the link below:
   https://www.geeksforgeeks.org/count-ways-reach-nth-stair/
 
-#include <iostream>
-using namespace std;
+        #include <iostream>
+        using namespace std;
 
-int countWays(int n, int m)
-{
-    if (n <= 1)
-        return n;
+        int countWays(int n, int m)
+        {
+            if (n <= 1)
+                return n;
 
-    int ways[n+1];
-    ways[0] = ways[1] = 1;
+            int ways[n+1];
+            ways[0] = ways[1] = 1;
 
-    for (int i = 2; i <= n; i++)
-    {
-        ways[i] = 0;
-        for (int j = 1; j <= m && j <= i; j++)
-            ways[i] += ways[i-j];
-    }
+            for (int i = 2; i <= n; i++)
+            {
+                ways[i] = 0;
+                for (int j = 1; j <= m && j <= i; j++)
+                    ways[i] += ways[i-j];
+            }
 
-    return ways[n];
-}
+            return ways[n];
+        }
 
-int main()
-{
-    int n, m;
-    cout << "Enter the number of stairs (n): ";
-    cin >> n;
-    cout << "Enter the maximum number of stairs that can be climbed at a time (m): ";
-    cin >> m;
-    cout << "Number of ways to climb " << n << " stairs with a maximum climb of " << m << " stairs at a time: " << countWays(n, m) << endl;
-    return 0;
-}
+        int main()
+        {
+            int n, m;
+            cout << "Enter the number of stairs (n): ";
+            cin >> n;
+            cout << "Enter the maximum number of stairs that can be climbed at a time (m): ";
+            cin >> m;
+            cout << "Number of ways to climb " << n << " stairs with a maximum climb of " << m << " stairs at a time: " << countWays(n, m) << endl;
+            return 0;
+        }
 
 The function countWays takes two arguments: n and m. n represents the total number of stairs, and m represents the maximum number of stairs that can be climbed at a time.
 
