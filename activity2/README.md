@@ -26,7 +26,7 @@ Note that this implementation of the Fibonacci sequence using recursion is not v
 
 
 - Modify the code to use Dynamic Programming (Memoization)
-
+```cpp
             #include <iostream>
             #include <unordered_map>
             using namespace std;
@@ -63,7 +63,7 @@ Note that this implementation of the Fibonacci sequence using recursion is not v
 
                 return 0;
             }
-
+```
 In this modified implementation, we use an unordered_map to store the previously calculated Fibonacci numbers. The fib(n) function first checks if the value of n is already present in the memoization table using memo.count(n). If it is, we simply return the value from the memoization table. If it's not present, we calculate the Fibonacci number using the recursive formula fib(n - 1) + fib(n - 2) and store it in the memoization table for future use.
 
 This approach ensures that we only calculate each Fibonacci number once and use the previously calculated value for subsequent calculations, resulting in faster performance. The countWays function is unchanged and still returns the (s+1)th Fibonacci number, which represents the number of ways to reach the top of a staircase with s steps.
@@ -90,7 +90,7 @@ Finally, the main function sets the value of n to 4 and calls the countWays func
 
 - There are `n` stairs, a person standing at the bottom wants to reach the top. Write a program that counts the number of ways someone can climb up to m stairs for a given value m. For example, if m is 4, it is possible to climb 1 stair or 2 stairs or 3 stairs or 4 stairs at a time. Make sure you use. Refer to the link below:
   https://www.geeksforgeeks.org/count-ways-reach-nth-stair/
-
+```cpp
         #include <iostream>
         using namespace std;
 
@@ -122,7 +122,7 @@ Finally, the main function sets the value of n to 4 and calls the countWays func
             cout << "Number of ways to climb " << n << " stairs with a maximum climb of " << m << " stairs at a time: " << countWays(n, m) << endl;
             return 0;
         }
-
+```
 The function countWays takes two arguments: n and m. n represents the total number of stairs, and m represents the maximum number of stairs that can be climbed at a time.
 
 The function first checks if n is less than or equal to 1. If it is, we simply return n as there is only one way to climb one or zero stairs.
