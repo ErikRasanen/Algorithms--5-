@@ -68,6 +68,15 @@ In terms of space complexity, the brute force approach and recursion with memoiz
 ## Task 4: Individual (at home)
 
 - Difference between divide and conquer and dynamic programming
+
+Both Divide and Conquer (D&C) and Dynamic Programming (DP) are problem-solving techniques used in algorithm design, but they differ in their approach to solving problems.
+
+Divide and Conquer is a problem-solving strategy that involves breaking down a problem into smaller sub-problems until they become simple enough to solve directly. This process is done recursively until the sub-problems are small enough to be solved easily. Once the sub-problems are solved, the solutions are combined to solve the original problem. D&C works well for problems that can be divided into sub-problems that are independent of each other, and where the solutions to the sub-problems can be combined to solve the original problem.
+
+On the other hand, Dynamic Programming is an algorithmic technique that solves problems by breaking them down into smaller sub-problems and solving each sub-problem once, storing its solution in memory. This approach reduces the number of redundant calculations and improves the time complexity of the algorithm. DP works well for problems where the optimal solution can be found by solving a sequence of sub-problems, and where the optimal solution to the original problem can be constructed from the solutions to the sub-problems.
+
+To summarize, both D&C and DP solve problems by dividing them into smaller sub-problems, but D&C solves sub-problems recursively and independently, while DP solves sub-problems iteratively and stores the solutions in memory for future use.
+
 - State some application of dynamic programming
 - Difference between recursion vs dynamic programming
 - Difference between Top down and bottom up approaches to dynamic programming
