@@ -27,42 +27,42 @@ Note that this implementation of the Fibonacci sequence using recursion is not v
 
 - Modify the code to use Dynamic Programming (Memoization)
 
-#include <iostream>
-#include <unordered_map>
-using namespace std;
+            #include <iostream>
+            #include <unordered_map>
+            using namespace std;
 
-unordered_map<int, int> memo;
+            unordered_map<int, int> memo;
 
-// A dynamic programming approach to find Nth fibonacci number
-int fib(int n)
-{
-    if (memo.count(n) > 0) {
-        return memo[n];
-    }
-    if (n <= 1) {
-        memo[n] = n;
-        return n;
-    }
-    int result = fib(n - 1) + fib(n - 2);
-    memo[n] = result;
-    return result;
-}
+            // A dynamic programming approach to find Nth fibonacci number
+            int fib(int n)
+            {
+                if (memo.count(n) > 0) {
+                    return memo[n];
+                }
+                if (n <= 1) {
+                    memo[n] = n;
+                    return n;
+                }
+                int result = fib(n - 1) + fib(n - 2);
+                memo[n] = result;
+                return result;
+            }
 
-// Returns number of ways to reach s'th stair
-int countWays(int s)
-{
-    return fib(s + 1);
-}
+            // Returns number of ways to reach s'th stair
+            int countWays(int s)
+            {
+                return fib(s + 1);
+            }
 
-// Driver C
-int main()
-{
-    int s = 4;
+            // Driver C
+            int main()
+            {
+                int s = 4;
 
-    cout << "Number of ways = " << countWays(s);
+                cout << "Number of ways = " << countWays(s);
 
-    return 0;
-}
+                return 0;
+            }
 
 In this modified implementation, we use an unordered_map to store the previously calculated Fibonacci numbers. The fib(n) function first checks if the value of n is already present in the memoization table using memo.count(n). If it is, we simply return the value from the memoization table. If it's not present, we calculate the Fibonacci number using the recursive formula fib(n - 1) + fib(n - 2) and store it in the memoization table for future use.
 
