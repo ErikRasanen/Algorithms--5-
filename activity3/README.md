@@ -69,18 +69,77 @@ In terms of space complexity, the brute force approach and recursion with memoiz
 
 - Difference between divide and conquer and dynamic programming
 
-Both Divide and Conquer (D&C) and Dynamic Programming (DP) are problem-solving techniques used in algorithm design, but they differ in their approach to solving problems.
+        Both Divide and Conquer (D&C) and Dynamic Programming (DP) are problem-solving techniques used in algorithm design, but they differ in their approach to solving problems.
 
-Divide and Conquer is a problem-solving strategy that involves breaking down a problem into smaller sub-problems until they become simple enough to solve directly. This process is done recursively until the sub-problems are small enough to be solved easily. Once the sub-problems are solved, the solutions are combined to solve the original problem. D&C works well for problems that can be divided into sub-problems that are independent of each other, and where the solutions to the sub-problems can be combined to solve the original problem.
+        Divide and Conquer is a problem-solving strategy that involves breaking down a problem into smaller sub-problems until they become simple enough to solve directly. This process is done recursively until the sub-problems are small enough to be solved easily. Once the sub-problems are solved, the solutions are combined to solve the original problem. D&C works well for problems that can be divided into sub-problems that are independent of each other, and where the solutions to the sub-problems can be combined to solve the original problem.
 
-On the other hand, Dynamic Programming is an algorithmic technique that solves problems by breaking them down into smaller sub-problems and solving each sub-problem once, storing its solution in memory. This approach reduces the number of redundant calculations and improves the time complexity of the algorithm. DP works well for problems where the optimal solution can be found by solving a sequence of sub-problems, and where the optimal solution to the original problem can be constructed from the solutions to the sub-problems.
+        On the other hand, Dynamic Programming is an algorithmic technique that solves problems by breaking them down into smaller sub-problems and solving each sub-problem once, storing its solution in memory. This approach reduces the number of redundant calculations and improves the time complexity of the algorithm. DP works well for problems where the optimal solution can be found by solving a sequence of sub-problems, and where the optimal solution to the original problem can be constructed from the solutions to the sub-problems.
 
-To summarize, both D&C and DP solve problems by dividing them into smaller sub-problems, but D&C solves sub-problems recursively and independently, while DP solves sub-problems iteratively and stores the solutions in memory for future use.
+        To summarize, both D&C and DP solve problems by dividing them into smaller sub-problems, but D&C solves sub-problems recursively and independently, while DP solves sub-problems iteratively and stores the solutions in memory for future use.
 
 - State some application of dynamic programming
+
+Dynamic programming has many applications across various fields, some of which are:
+
+        Optimization problems: Dynamic programming can be used to solve optimization problems, such as finding the shortest path in a graph, maximizing profits in a business, or minimizing the cost of production.
+
+        Image processing: Dynamic programming algorithms are used in image processing to improve the quality of an image, such as enhancing the resolution, reducing noise, or smoothing edges.
+
+        Artificial intelligence: Dynamic programming is used in artificial intelligence to solve problems such as game theory, planning, and optimization.
+
+        Bioinformatics: Dynamic programming is used in bioinformatics to solve problems such as sequence alignment, protein folding, and gene prediction.
+
+        Finance: Dynamic programming is used in finance to solve problems such as portfolio optimization, risk management, and option pricing.
+
+        Natural language processing: Dynamic programming is used in natural language processing to solve problems such as speech recognition, machine translation, and text summarization.
+
+        Robotics: Dynamic programming is used in robotics to solve problems such as motion planning, pathfinding, and control.
+
+
 - Difference between recursion vs dynamic programming
+
+        Approach:
+
+        Recursion is a top-down approach, where a problem is divided into smaller subproblems until the base case is reached. Each subproblem is then solved and the solutions are combined to solve the original problem.
+        Dynamic programming is a bottom-up approach, where the problem is first broken down into simpler subproblems and then solved iteratively. The solutions of subproblems are stored in a table and used to solve the larger problem.
+
+        Memory Usage:
+
+        Recursion often involves creating multiple function calls and storing their intermediate results on the call stack. This can lead to excessive memory usage and potential stack overflow issues.
+        Dynamic programming, on the other hand, stores intermediate results in a table, which can be accessed and reused multiple times. This can lead to more efficient use of memory.
+
+        Performance:
+
+        Recursion can have higher time complexity due to repeated function calls and redundant calculations.
+        Dynamic programming, however, can be more efficient as it avoids redundant calculations and optimizes the use of memory.
+
+        Application:
+
+        Recursion is generally used for problems where the solution depends on the solution to smaller subproblems.
+        Dynamic programming is commonly used for optimization problems, where the goal is to find the optimal solution among a set of subproblems.
+
 - Difference between Top down and bottom up approaches to dynamic programming
+
+        The main difference between the top-down and bottom-up approaches in dynamic programming is the order in which subproblems are solved.
+
+        In the top-down approach, also known as the memoization approach, we start with the original problem and break it down into smaller subproblems. Then, we solve each subproblem only once and store its result in a lookup table or cache, so that we can access it later if the same subproblem occurs again. This approach is similar to recursion, as it solves the problem by recursively breaking it down into smaller subproblems. The top-down approach typically uses recursion or a recursive function with memoization.
+
+        In the bottom-up approach, also known as the tabulation approach, we start with the subproblems and solve them in a specific order, typically from smallest to largest, until we solve the original problem. In this approach, we create a table or array to store the results of the subproblems and use the results of the previously solved subproblems to solve the current subproblem. This approach is usually implemented using loops instead of recursion and is more efficient in terms of space complexity.
+
+        Overall, the main difference between the two approaches is the order in which the subproblems are solved. The top-down approach solves the subproblems recursively and stores their results in memory, while the bottom-up approach iteratively solves the subproblems and stores their results in a table.
+
 - How to solve a Dynamic Programming Problem?
+
+            Identify if the problem can be broken down into smaller subproblems.
+            Determine the recurrence relation or the formula that relates the current subproblem to its smaller subproblems.
+            Identify the base cases, which are the smallest subproblems that can be solved directly.
+            Decide whether to use a top-down (memoization) or bottom-up (tabulation) approach to solve the problem.
+            If using a top-down approach, create a memoization table to store the solutions to the subproblems that have already been solved.
+            If using a bottom-up approach, create a tabulation table to store the solutions to the subproblems in a bottom-up manner.
+            Populate the table by solving the subproblems in the order defined by the recurrence relation.
+            Return the solution to the original problem, which can be found in the last entry of the table.
+
+        It is important to note that not all dynamic programming problems require all these steps, and sometimes modifications or variations may be required based on the specific problem. However, these steps provide a general framework for solving dynamic programming problems.
 
 > Refer to the [links](#links) section below
 
