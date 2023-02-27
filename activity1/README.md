@@ -47,7 +47,7 @@ Code counts the steps taken and also considers if 1 or 2 steps taken at a time.
 
 - There are `n` stairs, a person standing at the bottom wants to reach the top. The person can climb either 1 stair or 2 stairs or **3 stairs** at a time. Write a program that counts the number of ways, the person can reach the top. You can use the following program as a starter `./src/staircase1.cpp`. Also the link below might useful:
   https://www.includehelp.com/cpp-programs/stair-case-program-to-solve-the-staircase-problem.aspx
-'''cpp
+```cpp
         #include <iostream>
         using namespace std;
 
@@ -71,7 +71,7 @@ Code counts the steps taken and also considers if 1 or 2 steps taken at a time.
             cout << "number of paths =  " << number_of_paths(4);
             return 0;
         }
-'''
+```
 ## Task 4: Individual (at home)
 
 - What are the pros/cons of recursive over iterative Programming?
